@@ -1,6 +1,5 @@
 
-- A great flutter package for an **on-tap bounce** animation on any flutter widget
-
+- A great flutter and efficacious package for an **on-tap bounce** animation on any flutter widget
 
     
 ## Usage
@@ -24,7 +23,7 @@ import 'package:bounce_tap/bounce_tap.dart';
 - Only `child`,`onTap` are mandatory in the widget.
 - `tapIntensity` is used to define how much the widget should scale down when pressed
 - Stronger is `tapIntensity`, lower will the scale.
-- `tapIntensity`,`onTap` and `duration` can have `null` in the widget. By default `duration` is set to `200 milliseconds`.
+- `tapIntensity`,`onTap` and `duration` can have `null` in the widget. By default `duration` is set to `200 ms`.
 - **Please Note:** Always pass the duration in `milliseconds` for best result
 
 ```dart
