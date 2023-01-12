@@ -22,7 +22,8 @@ import 'package:bounce_tap/bounce_tap.dart';
 
 - In order to use this package, we just need to wrap the content with the widget `BounceTap`.
 - Only `child`,`onTap` are mandatory in the widget.
-- `tapInensity` is used to define how much the widget should scale down when pressed
+- `tapIntensity` is used to define how much the widget should scale down when pressed
+- Stronger is `tapIntensity`, lower will the scale.
 - `tapIntensity`,`onTap` and `duration` can have `null` in the widget. By default `duration` is set to `200 milliseconds`.
 - **Please Note:** Always pass the duration in `milliseconds` for best result
 
@@ -31,7 +32,7 @@ BounceTap(
   duration: Duration(milliseconds: 110),
   onPressed: (){ YOUR_FUNCTION },
   child: YOUR_WIDGET,
-  tapIntentisty: TapIntensity.strong
+  tapIntensity: TapIntensity.strong
 )
 ```
 
@@ -43,7 +44,7 @@ BounceTap(
 |-------------------|--------------------------|---|--|
 | child              | `Widget`                   | required|child widget |
 | onTap            | `VoidCallback`                 | required | onTap event handler |
-| tapIntensity    | `TapIntensity`                  | TapIntensity.mid| Set the intensity of the tap |
+| tapIntensity    | `TapIntensity`                  | `TapIntensity.mid`| Set the intensity of the tap |
 | duration         | `Duration`              | `Duration(milliseconds:200)`  | Set the text style of your carousel|
 | onLongPressed | `VoidCallback` |`null` | onLongPress event handler|
 | tapDelay     | `int`                   |200 | how long the widget should wait before calling the `onTap`/`onLongPress` events handlers|
