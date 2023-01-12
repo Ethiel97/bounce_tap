@@ -1,7 +1,7 @@
 library bounce_tap;
 
 import 'package:bounce_tap/constants.dart';
-import 'package:bounce_tap/tap_intenstiy.dart';
+import 'package:bounce_tap/tap_intensity.dart';
 import 'package:flutter/material.dart';
 
 /// A Calculator.
