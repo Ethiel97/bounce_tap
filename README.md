@@ -40,8 +40,8 @@ BounceTap(
 |-------------------|--------------------------|---|--|
 | child              | `Widget`                   | required|child widget |
 | onTap            | `VoidCallback`                 | required | onTap event handler |
-| tapIntensity    | `TapIntensity`                  | `TapIntensity.mid`| Set the intensity of the tap |
-| duration         | `Duration`              | `Duration(milliseconds:200)`  | Set the text style of your carousel|
+| tapIntensity    | `TapIntensity`                  | `TapIntensity.mid`| sets the intensity of the tap |
+| duration         | `Duration`              | `Duration(milliseconds:200)`  | sets the duration of the bounce animation|
 | onLongPressed | `VoidCallback` |`null` | onLongPress event handler|
 | tapDelay     | `int`                   |200 | how long the widget should wait before calling the `onTap`/`onLongPress` events handlers|
 
@@ -52,4 +52,4 @@ Now enjoy!
 
 ## Acknowledgement
 
-- I would like to thank [Mohsin](https://github.com/mohsin2596) for the indirect motivation for his widget, to come up with an efficient work around, which will now be useful for our flutter community people
+- I would like to thank [Mohsin](https://github.com/mohsin2596) for the inspiration for this library, which I think will be useful for Flutter community
