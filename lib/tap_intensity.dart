@@ -17,7 +17,7 @@ extension EnhancedEnum on TapIntensity {
       case TapIntensity.superStrong:
         return 0.8;
       default:
-        return 0.6;
+        return 0.2;
     }
   }
 }

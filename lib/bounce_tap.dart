@@ -23,8 +23,8 @@ class BounceTap extends StatefulWidget {
     super.key,
     required this.child,
     required this.onTap,
-    this.tapIntensity = TapIntensity.mid,
-    this.tapDelay = 100,
+    this.tapIntensity = TapIntensity.weak,
+    this.tapDelay = 300,
     this.duration,
     this.onLongPress,
   });
@@ -40,18 +40,19 @@ class _BounceTapState extends State<BounceTap>
   DateTime? tapDownTime;
   DateTime? tapUpTime;
 
-  Duration get duration => widget.duration ?? const Duration(milliseconds: 200);
+  Duration get duration => widget.duration ?? const Duration(milliseconds: 250);
 
   @override
   void initState() {
     super.initState();
     _animationController = AnimationController(
       vsync: this,
-      lowerBound: widget.tapIntensity.value,
-      upperBound: 1,
+      lowerBound: 0.0,
+      upperBound: widget.tapIntensity.value,
       duration: duration,
     )..addListener(() {
         setState(() {});
+        print('ANIMATION VALUE: ${_animationController.value}\n');
       });
   }
 
@@ -79,13 +80,11 @@ class _BounceTapState extends State<BounceTap>
   onTapUp(_) {
     tapUpTime = DateTime.now();
     final difference = tapUpTime!.difference(tapDownTime!);
-    if (difference.inMilliseconds <= Constants.longPressThreshold) {
-      widget.onTap.delayed(Duration(milliseconds: widget.tapDelay)).call();
+    if (difference.inMilliseconds <= 200) {
+      widget.onTap.delayed(Duration(milliseconds: widget.tapDelay));
     } else {
-      if (difference.inMilliseconds < 1000) {
-        widget.onLongPress
-            ?.delayed(Duration(milliseconds: widget.tapDelay))
-            .call();
+      if (difference.inMilliseconds < Constants.longPressThreshold) {
+        widget.onLongPress?.delayed(Duration(milliseconds: widget.tapDelay));
       }
     }
     _animationController.reverse();
@@ -94,6 +93,6 @@ class _BounceTapState extends State<BounceTap>
 
 extension on VoidCallback {
   delayed(Duration duration) {
-    Future.delayed(duration).then((value) => this);
+    Future.delayed(duration).then((value) => this.call());
   }
 }

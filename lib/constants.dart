@@ -1,3 +1,3 @@
 class Constants {
-  static const longPressThreshold = 500;
+  static const longPressThreshold = 1200;
 }

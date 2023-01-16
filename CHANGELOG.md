@@ -1,3 +1,8 @@
-## 0.0.1
+## 1.0.0
 
-* TODO: Describe initial release.
+* Added flutter bounce library
+
+## 1.0.1
+
+* Updated README
+

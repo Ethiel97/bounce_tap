@@ -7,9 +7,7 @@
 To use this package, add `bounce_tap` as a [dependency in your pubspec.yaml file](https://flutter.dev/docs/development/packages-and-plugins/using-packages).
 
 ## Demo
-
-[//]: # (TODO) add wallinice demo here
-[//]: # (TODO) add example folder
+![](assets/demo.gif)
 
 ## Example
 
@@ -22,16 +20,15 @@ import 'package:bounce_tap/bounce_tap.dart';
 - In order to use this package, we just need to wrap the content with the widget `BounceTap`.
 - Only `child`,`onTap` are mandatory in the widget.
 - `tapIntensity` is used to define how much the widget should scale down when pressed
-- Stronger is `tapIntensity`, lower will the scale.
+- Stronger is `tapIntensity`, lower will the widget scale.
 - `tapIntensity`,`onTap` and `duration` can have `null` in the widget. By default `duration` is set to `200 ms`.
-- **Please Note:** Always pass the duration in `milliseconds` for best result
 
 ```dart
 BounceTap(
-  duration: Duration(milliseconds: 110),
+  duration: Duration(milliseconds: 150),
   onPressed: (){ YOUR_FUNCTION },
   child: YOUR_WIDGET,
-  tapIntensity: TapIntensity.strong
+  tapIntensity: TapIntensity.mid
 )
 ```
 
@@ -51,7 +48,7 @@ BounceTap(
 
 Now enjoy!
 
-**Refer to [example folder](example/README.md) and the source code for more information.**
+**Refer to [example folder](example/lib/main.dart) and the source code for more information.**
 
 ## Acknowledgement
 
