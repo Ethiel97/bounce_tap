@@ -20,7 +20,7 @@ import 'package:bounce_tap/bounce_tap.dart';
 - In order to use this package, we just need to wrap the content with the widget `BounceTap`.
 - Only `child`,`onTap` are mandatory in the widget.
 - `tapIntensity` is used to define how much the widget should scale down when pressed
-- Stronger is `tapIntensity`, lower will the widget scale.
+- Stronger is `tapIntensity`, stronger will the widget bounce.
 - `tapIntensity`,`onTap` and `duration` can have `null` in the widget. By default `duration` is set to `200 ms`.
 
 ```dart
@@ -40,7 +40,7 @@ BounceTap(
 |-------------------|--------------------------|---|--|
 | child              | `Widget`                   | required|child widget |
 | onTap            | `VoidCallback`                 | required | onTap event handler |
-| tapIntensity    | `TapIntensity`                  | `TapIntensity.mid`| sets the intensity of the tap |
+| tapIntensity    | `TapIntensity`                  | `TapIntensity.mid`| sets the intensity of the tap, if defines how hard you want the widget to bounce on tap |
 | duration         | `Duration`              | `Duration(milliseconds:200)`  | sets the duration of the bounce animation|
 | onLongPressed | `VoidCallback` |`null` | onLongPress event handler|
 | tapDelay     | `int`                   |200 | how long the widget should wait before calling the `onTap`/`onLongPress` events handlers|

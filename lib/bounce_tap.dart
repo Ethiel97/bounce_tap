@@ -7,16 +7,22 @@ import 'package:flutter/material.dart';
 /// A Calculator.
 
 class BounceTap extends StatefulWidget {
+  /// this defines how hard you want the widget to bounce on tap
   final TapIntensity tapIntensity;
 
+  /// this is your widget child
   final Widget child;
 
+  /// This is a user defined duration
   final Duration? duration;
 
+  /// this callback triggers when your widget is tapped
   final VoidCallback onTap;
 
+  /// this callback triggers when your widget is pressed for a long time
   final VoidCallback? onLongPress;
 
+  /// it sets how much time must pass before executing onTap/onLongPress callbacks
   final int tapDelay;
 
   const BounceTap({
@@ -35,6 +41,7 @@ class BounceTap extends StatefulWidget {
 
 class _BounceTapState extends State<BounceTap>
     with SingleTickerProviderStateMixin {
+  /// this handles the animation
   late AnimationController _animationController;
 
   DateTime? tapDownTime;
@@ -52,6 +59,8 @@ class _BounceTapState extends State<BounceTap>
       duration: duration,
     )..addListener(() {
         setState(() {});
+
+        ///listens to the animation and updates the app state
         print('ANIMATION VALUE: ${_animationController.value}\n');
       });
   }
@@ -74,6 +83,8 @@ class _BounceTapState extends State<BounceTap>
 
   onTapDown(_) {
     tapDownTime = DateTime.now();
+
+    ///Firing the animation right away
     _animationController.forward();
   }
 
@@ -87,6 +98,8 @@ class _BounceTapState extends State<BounceTap>
         widget.onLongPress?.delayed(Duration(milliseconds: widget.tapDelay));
       }
     }
+
+    ///now reverse the animation
     _animationController.reverse();
   }
 }
