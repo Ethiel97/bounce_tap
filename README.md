@@ -41,9 +41,9 @@ BounceTap(
 | child              | `Widget`                   | required|child widget |
 | onTap            | `VoidCallback`                 | required | onTap event handler |
 | tapIntensity    | `TapIntensity`                  | `TapIntensity.mid`| sets the intensity of the tap, if defines how hard you want the widget to bounce on tap |
-| duration         | `Duration`              | `Duration(milliseconds:200)`  | sets the duration of the bounce animation|
+| duration         | `Duration`              | `Duration(milliseconds:250)`  | sets the duration of the bounce animation|
 | onLongPressed | `VoidCallback` |`null` | onLongPress event handler|
-| tapDelay     | `int`                   |200 | how long the widget should wait before calling the `onTap`/`onLongPress` events handlers|
+| tapDelay     | `int`                   |300 | how long the widget should wait before calling the `onTap`/`onLongPress` events handlers|
 
 
 Now enjoy!
