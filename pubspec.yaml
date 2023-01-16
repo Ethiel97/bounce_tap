@@ -1,6 +1,6 @@
 name: bounce_tap
 description: A great and efficacious flutter package to add an on-tap bounce animation on any flutter widget
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/Ethiel97/bounce_tap
 
 environment:
