@@ -10,17 +10,15 @@ class MyApp extends StatelessWidget {
 
   // This widget is the root of your application.
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Bounce',
-      theme: ThemeData(
-        //primarySwatch: Colors.indigo[400],
-        primaryColor: Colors.indigo[400],
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: const MyHomePage(title: 'Flutter Bounce Demo'),
-    );
-  }
+  Widget build(BuildContext context) => MaterialApp(
+        title: 'Flutter Bounce',
+        theme: ThemeData(
+          //primarySwatch: Colors.indigo[400],
+          primaryColor: Colors.indigo[400],
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+        ),
+        home: const MyHomePage(title: 'Flutter Bounce Demo'),
+      );
 }
 
 class MyHomePage extends StatefulWidget {
@@ -28,7 +26,7 @@ class MyHomePage extends StatefulWidget {
   final String title;
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {

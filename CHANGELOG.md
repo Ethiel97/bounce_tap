@@ -6,3 +6,7 @@
 
 * Updated README
 
+## 1.0.2
+
+* Fix analysis issues
+

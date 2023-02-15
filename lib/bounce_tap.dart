@@ -2,6 +2,7 @@ library bounce_tap;
 
 import 'package:bounce_tap/constants.dart';
 import 'package:bounce_tap/tap_intensity.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 /// A Calculator.
@@ -61,7 +62,9 @@ class _BounceTapState extends State<BounceTap>
         setState(() {});
 
         ///listens to the animation and updates the app state
-        print('ANIMATION VALUE: ${_animationController.value}\n');
+        if (kDebugMode) {
+          print('ANIMATION VALUE: ${_animationController.value}\n');
+        }
       });
   }
 
