@@ -4,7 +4,12 @@
     
 ## Usage
 
-To use this package, add `bounce_tap` as a [dependency in your pubspec.yaml file](https://flutter.dev/docs/development/packages-and-plugins/using-packages).
+To use this package, add [`bounce_tap`](https://pub.dev/packages/bounce_tap) as a 
+[dependency in your pubspec.yaml file](https://flutter.dev/docs/development/packages-and-plugins/using-packages).
+
+```console
+$ flutter pub add bounce_tap
+```
 
 ## Demo
 ![](assets/demo.gif)
